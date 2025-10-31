@@ -1,0 +1,1330 @@
+.templating-examples-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  .example-section {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    h2 {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: #0056b3;
+      }
+
+      &:disabled {
+        background: #6c757d;
+        cursor: not-allowed;
+      }
+
+      &.active {
+        background: #28a745;
+      }
+    }
+
+    input, select {
+      padding: 8px 12px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      margin: 4px;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+      }
+    }
+  }
+
+  .conditional-content {
+    background: #e7f3ff;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+    margin-top: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background: white;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      border: 1px solid #dee2e6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .remove-btn {
+        background: #dc3545;
+        font-size: 12px;
+        padding: 4px 8px;
+
+        &:hover {
+          background: #c82333;
+        }
+      }
+    }
+  }
+
+  .theme-box {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 15px 0;
+    transition: all 0.3s;
+
+    &.primary { background: #007bff; color: white; }
+    &.secondary { background: #6c757d; color: white; }
+    &.success { background: #28a745; color: white; }
+    &.danger { background: #dc3545; color: white; }
+  }
+
+  .style-box {
+    text-align: center;
+    margin: 15px 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pipes-demo {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+
+    p {
+      margin-bottom: 8px;
+      padding: 4px 0;
+      border-bottom: 1px solid #f1f3f4;
+
+      strong {
+        color: #495057;
+        min-width: 150px;
+        display: inline-block;
+      }
+    }
+  }
+
+  // New examples styles - compact
+  .switch-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    min-height: 80px;
+  }
+
+  .safe-navigation-demo, .trackby-demo, .form-preview {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin-top: 10px;
+  }
+
+  .highlight-demo {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+
+    &.highlighted {
+      background: #fff3cd;
+      border-color: #ffeaa7;
+    }
+  }
+
+  .example-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      input {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+
+  .event-demo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    min-height: 100px;
+  }
+
+  .loading-indicator {
+    background: #e7f3ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #007bff;
+    margin: 15px 0;
+  }
+
+  .async-results {
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    margin: 15px 0;
+  }
+
+  // New examples styles (21-30)
+  
+  // Example 21: Pipes simulation
+  .pipes-simulation {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+
+    .input-group {
+      margin-top: 15px;
+      
+      input {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  // Example 22: Dynamic components
+  .component-switcher {
+    .component-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .dynamic-component {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #dee2e6;
+      min-height: 200px;
+    }
+
+    .card-component .card {
+      text-align: center;
+      img { width: 100px; height: 100px; border-radius: 8px; margin-bottom: 10px; }
+    }
+
+    .dynamic-list {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .dynamic-table {
+      width: 100%;
+      border-collapse: collapse;
+      th, td { padding: 10px; border: 1px solid #dee2e6; text-align: left; }
+      th { background: #f8f9fa; }
+    }
+  }
+
+  // Example 23: Advanced form validation
+  .reactive-form {
+    .form-group {
+      margin-bottom: 20px;
+
+      input.error {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+      }
+
+      .error-message {
+        color: #dc3545;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  // Example 24: Content projection
+  .projected-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-top: 15px;
+
+    .card-header, .card-body, .card-footer {
+      padding: 15px;
+      position: relative;
+      
+      .edit-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+
+    .card-header {
+      background: #f8f9fa;
+      border-bottom: 1px solid #dee2e6;
+      font-weight: bold;
+    }
+
+    .card-footer {
+      background: #f8f9fa;
+      border-top: 1px solid #dee2e6;
+    }
+  }
+
+  // Example 25: Lifecycle hooks
+  .lifecycle-demo {
+    .lifecycle-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .lifecycle-log {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 15px;
+
+      ul {
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+      }
+    }
+  }
+
+  // Example 26: Custom validation
+  .validation-demo {
+    .validation-errors {
+      background: #f8d7da;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #f5c6cb;
+      margin-top: 10px;
+    }
+
+    .validation-success {
+      background: #d4edda;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      margin-top: 10px;
+    }
+  }
+
+  // Example 27: Observable simulation
+  .observable-demo {
+    text-align: center;
+
+    .counter-display {
+      background: #e7f3ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+
+      h3 {
+        font-size: 2rem;
+        margin: 0;
+        color: #007bff;
+      }
+    }
+
+    .counter-controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  // Example 28: Lazy loading
+  .lazy-loading-demo {
+    .lazy-content {
+      background: #d4edda;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid #28a745;
+    }
+  }
+
+  // Example 29: i18n
+  .i18n-demo {
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .translated-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #dee2e6;
+      text-align: center;
+    }
+
+    .language-info {
+      margin-top: 15px;
+      font-style: italic;
+    }
+  }
+
+  // Example 30: Animation states
+  .animation-demo {
+    text-align: center;
+
+    .animated-element {
+      background: #007bff;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 20px 0;
+      transition: all 0.5s ease;
+
+      &.animation-active {
+        transform: scale(1.1);
+        background: #28a745;
+      }
+
+      &.animation-complete {
+        transform: rotate(360deg);
+        background: #dc3545;
+      }
+    }
+
+    .animation-controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .animation-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  // Additional styles for examples 31-50
+  
+  // Example 31: API demo
+  .api-demo {
+    .api-controls { display: flex; gap: 10px; margin-bottom: 15px; }
+    .api-item { background: white; padding: 15px; border-radius: 4px; border: 1px solid #dee2e6; margin-bottom: 10px; }
+  }
+
+  // Example 32: Storage demo
+  .storage-demo {
+    .storage-input { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;
+      input { flex: 1; min-width: 200px; }
+    }
+    .storage-items { background: white; padding: 15px; border-radius: 4px; border: 1px solid #dee2e6; }
+  }
+
+  // Example 33: DateTime demo
+  .datetime-demo {
+    .date-controls { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+    .date-display { background: white; padding: 15px; border-radius: 4px; border: 1px solid #dee2e6; }
+  }
+
+  // Example 34: Upload demo
+  .upload-demo {
+    .file-list { margin: 15px 0; background: white; padding: 15px; border-radius: 4px; border: 1px solid #dee2e6; }
+    .upload-progress { margin-top: 15px; }
+    .progress-bar { width: 100%; height: 20px; background: #f1f3f4; border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 100%; background: #007bff; transition: width 0.3s ease; }
+  }
+
+  // Example 35: Drag and drop
+  .drag-drop-demo {
+    display: flex; gap: 20px;
+    .drag-source, .drop-zone { flex: 1; padding: 20px; border: 2px dashed #ccc; border-radius: 8px; min-height: 200px; }
+    .drag-item { background: #007bff; color: white; padding: 10px; margin: 5px 0; border-radius: 4px; cursor: move; }
+    .drop-zone.drag-over { border-color: #007bff; background: #e7f3ff; }
+  }
+
+  // Example 36: Modal
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+  .modal-content { background: white; border-radius: 8px; max-width: 500px; width: 90%; max-height: 90vh; overflow: auto; }
+  .modal-header { padding: 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; }
+  .modal-body { padding: 20px; }
+  .modal-footer { padding: 20px; border-top: 1px solid #dee2e6; text-align: right; }
+  .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; }
+
+  // Example 37: Toast
+  .toast-demo {
+    .toast-controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .toast-container { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .toast { background: white; border-radius: 4px; margin-bottom: 10px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; min-width: 300px; }
+    .toast-success { border-left: 4px solid #28a745; }
+    .toast-error { border-left: 4px solid #dc3545; }
+    .toast-warning { border-left: 4px solid #ffc107; }
+    .toast-info { border-left: 4px solid #007bff; }
+  }
+
+  // Example 38: Progress
+  .progress-demo {
+    .progress-container { margin: 20px 0; }
+    .process-steps { margin-top: 20px; }
+    .steps { display: flex; gap: 10px; margin-top: 10px; }
+    .step { padding: 8px 12px; border: 1px solid #dee2e6; border-radius: 4px; font-size: 12px; }
+    .step.active { background: #007bff; color: white; }
+    .step.completed { background: #28a745; color: white; }
+  }
+
+  // Example 39: Search filter
+  .search-filter-demo {
+    .search-controls { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;
+      input { flex: 1; min-width: 200px; }
+    }
+    .search-item { background: white; padding: 15px; border-radius: 4px; border: 1px solid #dee2e6; margin-bottom: 10px; }
+  }
+
+  // Example 40: Accordion
+  .accordion-demo {
+    .accordion-item { border: 1px solid #dee2e6; border-radius: 4px; margin-bottom: 5px; }
+    .accordion-header { padding: 15px; background: #f8f9fa; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .accordion-content { padding: 15px; background: white; }
+  }
+
+  // Example 41: Tabs
+  .tabs-demo {
+    .tab-headers { display: flex; border-bottom: 1px solid #dee2e6; }
+    .tab-header { padding: 12px 20px; border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; }
+    .tab-header.active { border-bottom-color: #007bff; color: #007bff; }
+    .tab-content { padding: 20px; }
+  }
+
+  // Example 42: Rating
+  .rating-demo {
+    text-align: center;
+    .stars { font-size: 2rem; margin: 20px 0; }
+    .star { cursor: pointer; color: #ddd; transition: color 0.2s; }
+    .star.filled { color: #ffc107; }
+    .star.readonly { cursor: default; }
+  }
+
+  // Example 43: Pagination
+  .pagination-demo {
+    text-align: center;
+    .pagination-controls { display: flex; gap: 5px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
+    .page-btn { width: 40px; height: 40px; }
+    .page-btn.active { background: #007bff; color: white; }
+  }
+
+  // Example 44: Breadcrumb
+  .breadcrumb-demo {
+    .breadcrumb { font-size: 14px; }
+    .breadcrumb-link { color: #007bff; cursor: pointer; text-decoration: underline; }
+    .breadcrumb-active { font-weight: bold; }
+  }
+
+  // Example 45: Color picker
+  .color-picker-demo {
+    .color-display { padding: 40px; border-radius: 8px; text-align: center; margin: 15px 0; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
+    .color-palette { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
+    .color-swatch { width: 40px; height: 40px; border-radius: 4px; cursor: pointer; border: 2px solid transparent; }
+    .color-swatch.selected { border-color: #333; }
+  }
+
+  // Example 46: Slider
+  .slider-demo {
+    .slider-container { margin: 20px 0; }
+    .slider-labels { display: flex; justify-content: space-between; font-size: 12px; color: #666; }
+  }
+
+  // Example 47: Tree view
+  .tree-demo {
+    .tree-view { font-family: monospace; }
+    .tree-node { margin-left: 20px; }
+    .tree-node.child { margin-left: 40px; }
+    .tree-node.grandchild { margin-left: 60px; }
+    .tree-item { padding: 5px; cursor: pointer; }
+    .tree-item:hover { background: #f8f9fa; }
+  }
+
+  // Example 48: Sortable table
+  .table-demo {
+    .sortable-table { width: 100%; border-collapse: collapse; }
+    .sortable-table th, .sortable-table td { padding: 12px; border: 1px solid #dee2e6; text-align: left; }
+    .sortable-table th { background: #f8f9fa; cursor: pointer; }
+    .sortable-table th:hover { background: #e9ecef; }
+  }
+
+  // Example 49: Calendar
+  .calendar-demo {
+    .calendar-controls { display: flex; gap: 10px; margin-bottom: 15px; }
+    .date-list { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .selected-date { padding: 5px 10px; background: #007bff; color: white; border-radius: 4px; font-size: 12px; }
+  }
+
+  // Example 50: Chart
+  .chart-demo {
+    .chart-controls { display: flex; gap: 10px; margin-bottom: 20px; }
+    .chart-container { height: 300px; border: 1px solid #dee2e6; border-radius: 4px; margin: 20px 0; position: relative; }
+    .bar-chart { display: flex; align-items: end; justify-content: space-around; height: 100%; padding: 20px; }
+    .bar-item { display: flex; flex-direction: column; align-items: center; }
+    .bar { background: #007bff; width: 30px; margin-bottom: 5px; }
+    .line-chart { position: relative; height: 100%; }
+    .chart-grid { position: relative; height: 100%; }
+    .data-point { position: absolute; width: 10px; height: 10px; background: #007bff; border-radius: 50%; }
+    .chart-legend { display: flex; gap: 20px; flex-wrap: wrap; }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    padding: 10px;
+    
+    .example-section {
+      padding: 15px;
+    }
+
+    .component-buttons, .lifecycle-buttons, .counter-controls, 
+    .language-switcher, .animation-controls, .animation-actions,
+    .search-controls, .date-controls, .storage-input, .toast-controls,
+    .chart-controls, .calendar-controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .drag-drop-demo {
+      flex-direction: column;
+    }
+
+    .toast-container {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  }
+
+  // Advanced Examples 51-100 Styles
+
+  // Example 51: WebSocket Real-time Data
+  .realtime-data {
+    .status { 
+      padding: 5px 10px; 
+      border-radius: 4px; 
+      font-weight: bold;
+      &.connected { background-color: #d4edda; color: #155724; }
+    }
+    .data-list { max-height: 200px; overflow-y: auto; }
+    .data-item { 
+      padding: 8px; 
+      margin: 5px 0; 
+      background: #f8f9fa; 
+      border-radius: 4px;
+      &.animate-in { animation: slideInRight 0.3s ease-out; }
+    }
+  }
+
+  // Example 52: Advanced Form Validation
+  .advanced-form {
+    .form-group { margin-bottom: 20px; }
+    input.error { border-color: #dc3545; box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
+    .error-message { color: #dc3545; font-size: 0.875rem; margin-top: 5px; display: block; }
+  }
+
+  // Example 53: State Management Pattern
+  .state-display {
+    .state-json { 
+      background: #f8f9fa; 
+      padding: 15px; 
+      border-radius: 4px; 
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+  }
+
+  // Example 54: Component Communication
+  .communication-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .parent-component, .child-component {
+      padding: 15px;
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+    }
+    .parent-component { border-color: #007bff; }
+    .child-component { border-color: #28a745; }
+  }
+
+  // Example 55: Dynamic Component Loading
+  .dynamic-component {
+    margin-top: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  // Example 56: Advanced Animations
+  .animation-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 20px auto;
+    
+    &.animate-fadeIn { animation: fadeIn var(--animation-speed, 300ms) ease-in; }
+    &.animate-slideUp { animation: slideUp var(--animation-speed, 300ms) ease-out; }
+    &.animate-bounce { animation: bounce var(--animation-speed, 300ms) ease-in-out; }
+    &.animate-rotate { animation: rotate var(--animation-speed, 300ms) ease-in-out; }
+  }
+
+  // Example 57: Micro Frontend Integration
+  .microfrontend-container {
+    margin-top: 15px;
+    min-height: 100px;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading { color: #6c757d; font-style: italic; }
+    .microfrontend-content { 
+      padding: 20px; 
+      background: #e7f3ff; 
+      border-radius: 6px; 
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  // Example 58: Performance Monitoring
+  .metrics-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    .metric {
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      text-align: center;
+      label { display: block; font-weight: bold; color: #495057; }
+      span { font-size: 1.2rem; color: #007bff; }
+    }
+  }
+
+  // Example 59: PWA Features
+  .pwa-status {
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      label { font-weight: bold; }
+      .online { color: #28a745; }
+      .offline { color: #dc3545; }
+    }
+  }
+
+  // Example 60: Advanced Caching
+  .cache-info {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+  }
+
+  // Example 61: GraphQL Integration
+  .graphql-query {
+    textarea { width: 100%; font-family: 'Courier New', monospace; }
+  }
+  .graphql-result {
+    margin-top: 15px;
+    pre { 
+      background: #f8f9fa; 
+      padding: 15px; 
+      border-radius: 6px; 
+      overflow-x: auto;
+      font-size: 0.875rem;
+    }
+  }
+
+  // Example 62: Real-time Collaboration
+  .collaboration-users {
+    margin-bottom: 15px;
+    ul { list-style-type: none; padding: 0; }
+    li { 
+      display: inline-block; 
+      background: #007bff; 
+      color: white; 
+      padding: 4px 8px; 
+      border-radius: 12px; 
+      margin: 2px; 
+      font-size: 0.875rem;
+    }
+  }
+  .shared-document {
+    textarea { 
+      width: 100%; 
+      border: 2px solid #dee2e6; 
+      border-radius: 6px;
+      &:focus { border-color: #007bff; }
+    }
+  }
+
+  // Example 63: A/B Testing
+  .ab-test {
+    text-align: center;
+    .variant-a button { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .variant-b button { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .conversion-metrics { 
+      margin-top: 15px; 
+      padding: 10px; 
+      background: #f8f9fa; 
+      border-radius: 6px; 
+    }
+  }
+
+  // Example 64: Machine Learning Integration
+  .ml-interface {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .prediction-result {
+    margin-top: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    border-radius: 8px;
+    color: #2c3e50;
+  }
+
+  // Example 65: Blockchain Integration
+  .wallet-status {
+    .wallet-info {
+      margin-top: 15px;
+      padding: 15px;
+      background: #e8f4f8;
+      border-radius: 8px;
+      border-left: 4px solid #17a2b8;
+    }
+  }
+
+  // Example 66: IoT Device Control
+  .iot-controls {
+    .device-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 15px 0;
+    }
+    .device-card {
+      padding: 15px;
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      text-align: center;
+      .status { 
+        display: block; 
+        margin-top: 5px; 
+        font-weight: bold;
+        &.online { color: #28a745; }
+      }
+    }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .status-item {
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      .toggle-btn {
+        padding: 5px 15px;
+        border: 2px solid #dee2e6;
+        background: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &.active { background: #28a745; color: white; border-color: #28a745; }
+      }
+    }
+  }
+
+  // Example 67: Voice Recognition
+  .voice-controls {
+    text-align: center;
+    .voice-status {
+      margin: 15px 0;
+      .listening { color: #dc3545; animation: pulse 1s infinite; }
+    }
+    .supported-commands {
+      margin-top: 15px;
+      ul { list-style-type: none; padding: 0; }
+      li { 
+        display: inline-block; 
+        background: #6c757d; 
+        color: white; 
+        padding: 4px 8px; 
+        border-radius: 12px; 
+        margin: 2px; 
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // Example 68: Augmented Reality
+  .ar-controls {
+    .ar-viewport {
+      width: 100%;
+      height: 300px;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      position: relative;
+      cursor: crosshair;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      .ar-camera {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+      .ar-marker {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        animation: bounceIn 0.5s ease-out;
+      }
+      .ar-instruction {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // Example 69: Advanced Data Visualization
+  .chart-controls {
+    .interaction-controls {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      label { 
+        display: flex; 
+        align-items: center; 
+        gap: 5px; 
+        cursor: pointer;
+      }
+    }
+  }
+  .d3-chart {
+    .chart-container {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      background: white;
+      svg { border-radius: 6px; }
+    }
+  }
+
+  // Example 70: Custom Element/Web Component
+  .custom-element-demo {
+    .custom-element-wrapper {
+      margin-top: 15px;
+      .custom-element {
+        padding: 20px;
+        border: 3px solid #6f42c1;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+
+  // Example 71: Server-Sent Events
+  .sse-events {
+    margin-top: 15px;
+    .event-item {
+      padding: 8px;
+      margin: 5px 0;
+      background: #d1ecf1;
+      border-left: 4px solid #bee5eb;
+      border-radius: 4px;
+    }
+  }
+
+  // Example 72: Advanced Routing
+  .routing-info {
+    .route-display {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+    }
+  }
+
+  // Example 73: Internationalization
+  .i18n-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  .translated-content {
+    padding: 20px;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  // Example 74: Accessibility Enhancements
+  .accessibility-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    label { display: flex; align-items: center; gap: 10px; }
+  }
+  .accessibility-demo {
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    
+    &.high-contrast {
+      background: black;
+      color: yellow;
+      border: 2px solid yellow;
+    }
+    &.font-small { font-size: 0.75rem; }
+    &.font-large { font-size: 1.25rem; }
+    &.font-xlarge { font-size: 1.5rem; }
+  }
+
+  // Example 75: Advanced Security
+  .security-status {
+    ul { list-style: none; padding: 0; }
+    li { 
+      padding: 5px 0; 
+      border-bottom: 1px solid #dee2e6;
+      &:last-child { border-bottom: none; }
+    }
+    .token-info {
+      margin-top: 15px;
+      padding: 15px;
+      background: #d4edda;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+    }
+  }
+
+  // Example 76: Enterprise Patterns
+  .pattern-controls {
+    label { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      margin: 8px 0;
+      cursor: pointer;
+    }
+  }
+
+  // Example 77: Microservices Integration
+  .microservices-status {
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .service-card {
+      padding: 15px;
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      text-align: center;
+      .status { 
+        display: block; 
+        margin: 5px 0; 
+        font-weight: bold;
+        &.connected { color: #28a745; }
+      }
+    }
+  }
+
+  // Example 78: Advanced Testing Patterns
+  .testing-controls {
+    .test-results {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .result-item {
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      &.passed { background: #d4edda; color: #155724; }
+      &.failed { background: #f8d7da; color: #721c24; }
+      &.skipped { background: #fff3cd; color: #856404; }
+    }
+  }
+
+  // Example 79: DevOps Integration
+  .deployment-info {
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .info-item {
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      text-align: center;
+      &.healthy { background: #d4edda; color: #155724; }
+    }
+  }
+
+  // Example 80: Advanced Error Handling
+  .error-controls {
+    .error-logs {
+      margin-top: 15px;
+      .error-item {
+        padding: 10px;
+        margin: 5px 0;
+        background: #f8d7da;
+        border-left: 4px solid #dc3545;
+        border-radius: 4px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // Example 90: Plugin Architecture
+  .plugin-controls {
+    .loaded-plugins {
+      margin-top: 15px;
+      ul { list-style: none; padding: 0; }
+      li {
+        padding: 8px;
+        margin: 5px 0;
+        background: #e7f3ff;
+        border-left: 4px solid #007bff;
+        border-radius: 4px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // Example 95: Advanced Monitoring
+  .monitoring-controls {
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .metric-item {
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      &.warning { background: #fff3cd; border-left: 4px solid #ffc107; }
+      label { display: block; font-weight: bold; margin-bottom: 8px; }
+      .progress-bar {
+        width: 100%;
+        height: 20px;
+        background: #e9ecef;
+        border-radius: 10px;
+        overflow: hidden;
+        .progress {
+          height: 100%;
+          background: linear-gradient(135deg, #28a745, #20c997);
+          transition: width 0.3s ease;
+        }
+      }
+    }
+  }
+
+  // Example 100: Future-Ready Patterns
+  .future-controls {
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 15px 0;
+      label { 
+        display: flex; 
+        align-items: center; 
+        gap: 8px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 6px;
+        transition: background 0.3s;
+        &:hover { background: rgba(102, 126, 234, 0.1); }
+      }
+    }
+    .btn-primary.futuristic {
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
+    }
+    .future-config {
+      margin-top: 20px;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+      animation: glowPulse 2s ease-in-out infinite alternate;
+    }
+  }
+
+  // Additional Animations for Advanced Examples
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes bounceIn {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes glowPulse {
+    0% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+    100% { box-shadow: 0 0 30px rgba(118, 75, 162, 0.8); }
+  }
+
+  // Responsive adjustments for advanced examples
+  @media (max-width: 768px) {
+    .communication-demo {
+      grid-template-columns: 1fr;
+    }
+
+    .ml-interface, .iot-controls .status-grid {
+      flex-direction: column;
+    }
+
+    .metrics-display, .services-grid, .device-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .future-controls .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
